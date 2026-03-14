@@ -1,10 +1,13 @@
+
 const crypto = require("crypto");
 
-function generateHash(data) {
-  return crypto
-    .createHash("sha256")
-    .update(data)
-    .digest("hex");
+function generateMarksHash(data) {
+    const hash = crypto
+        .createHash("sha256")
+        .update(JSON.stringify(data))
+        .digest("hex");
+
+    return hash;
 }
 
-module.exports = generateHash;
+module.exports = generateMarksHash;

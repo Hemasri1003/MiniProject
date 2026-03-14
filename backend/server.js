@@ -3,21 +3,13 @@ const cors = require("cors");
 
 const app = express();
 
+const marksRoutes = require("./routes/marksRoutes");
+
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Backend server running successfully!");
-});
+app.use("/api", marksRoutes);
 
-app.get("/test", (req, res) => {
-  res.json({
-    message: "Backend API working"
-  });
-});
-
-const PORT = 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
 });
