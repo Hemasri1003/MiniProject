@@ -28,32 +28,6 @@ Other Concepts:
 
 ---
 
-## Project Structure
-
-```
-exam-blockchain-project
-│
-├── client (React Frontend)
-│   ├── src
-│   │   ├── pages
-│   │   │   ├── LoginPage.js
-│   │   │   ├── MarksEntryPage.js
-│   │   │   ├── BlockchainViewer.js
-│   │   │   └── VerificationPage.js
-│   │   │
-│   │   ├── components
-│   │   └── services
-│
-├── server (Node + Express Backend)
-│   ├── routes
-│   ├── controllers
-│   ├── models
-│   ├── blockchain
-│   └── utils
-```
-
----
-
 ## Main Features
 
 - Secure marks entry
